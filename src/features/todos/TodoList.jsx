@@ -54,4 +54,22 @@ const TodoList = () => {
       </button>
     </form>
   );
+  let content;
+  if (isLoading) {
+    content = <p>Loading...</p>;
+  } else if (isError) {
+    content = <p>{error.message}</p>;
+  } else {
+    content = JSON.stringify(todos);
+  }
+
+  return (
+    <main>
+      <h1>Todo List</h1>
+      {newItemSection}
+      {content}
+    </main>
+  );
 };
+
+export default TodoList;
