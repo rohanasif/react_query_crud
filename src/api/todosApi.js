@@ -17,7 +17,7 @@ export const updateTodo = async (todo) => {
   return await todosApi.patch(`/todos/${todo.id}`, todo);
 };
 
-export const deleteTodo = async (id) => {
+export const deleteTodo = async ({ id }) => {
   return await todosApi.delete(`/todos/${id}`, id);
 };
 
