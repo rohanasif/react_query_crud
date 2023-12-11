@@ -20,21 +20,18 @@ const TodoList = () => {
 
   const addTodoMutation = useMutation(addTodo, {
     onSuccess: () => {
-      // Invalidates cache and refetch
       queryClient.invalidateQueries("todos");
     },
   });
 
   const updateTodoMutation = useMutation(updateTodo, {
     onSuccess: () => {
-      // Invalidates cache and refetch
       queryClient.invalidateQueries("todos");
     },
   });
 
   const deleteTodoMutation = useMutation(deleteTodo, {
     onSuccess: () => {
-      // Invalidates cache and refetch
       queryClient.invalidateQueries("todos");
     },
   });
