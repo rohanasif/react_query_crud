@@ -38,7 +38,7 @@ const TodoList = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTodoMutation.mutate({ userId: 1, title: newTodo, completed: false });
+    addTodoMutation.mutate({ title: newTodo, completed: false });
     setNewTodo("");
   };
 
